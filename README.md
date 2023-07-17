@@ -23,13 +23,6 @@ EXspends is a comprehensive personal finance tracker that simplifies money manag
 ## Architectural Flow
 ![flow](https://github.com/Fastest-Coder-First/Dracarys/assets/91118866/5bf5cec1-0c7f-4523-a46a-e18d3cb3ef0f)
 
-## Copilot Usage
-- **Enhanced Code Suggestion**: Copilot provided me with powerful code suggestions, autocompleted functions and methods and reduced the chances of syntax errors or typos.
-- **Efficient Error Handling**: Copilot assisted me in error handling by suggesting common error handling patterns, helping me catch and handle exceptions, validate inputs, and provide meaningful error messages.
-- **Error Correction Assistance**: Copilot helped me identify and correct errors in my code by suggesting fixes for syntax errors, missing or misplaced brackets, parentheses, or semicolons.
-- **Accelerated Development**: By automating parts of my coding process, Copilot sped up my development by generating boilerplate code for common tasks, allowing me to focus on the core logic of my application.
-- **Improved Code Quality**: Copilot's code suggestions contributed to better code quality by identifying potential bugs, recommending refactoring options, and adhering to best practices, resulting in cleaner, more maintainable code.
-
 ## Additional Features (Future Scopes)
 
 - **Collaboration Feature**: Enable collaboration between users, allowing them to share and collaborate on expense tracking. Users can invite others to join their financial group, share expenses, and view real-time updates. This feature promotes financial transparency and facilitates joint expense management, such as shared household expenses or group trips.
