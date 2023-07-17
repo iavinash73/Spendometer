@@ -1,5 +1,3 @@
-[Demo Video](https://drive.google.com/file/d/1hy2_6YBVVsqPIJuD3HKoQXDaOpY7KhSV/view)
-
 # EXspends
 
 EXspends is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals.<br>
