@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  background-color: rgb(226 232 240);
+}
+
+.animate-spin-slow {
+  animation: spin 2s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.nuns-font-400 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+
+.nuns-font-500 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+}
+
+.nuns-font-600 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+}
+
+.nuns-font-700 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+}
+
+.nun-font-400 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.nun-font-500 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+}
+
+.nun-font-600 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+.nun-font-700 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
