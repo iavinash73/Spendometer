@@ -13,11 +13,6 @@ const getBills = asyncHandler(async (req, res) => {
   res.status(200).json({ bills, total })
 })
 
-
-
-
-
-
 // @desc    Set bill
 // @route   POST /api/bills
 // @access  Private
