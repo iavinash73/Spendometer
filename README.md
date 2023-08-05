@@ -1,6 +1,6 @@
 # Spend-o-meter
 
-EXspends is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals.<br>
+Spend-o-meter is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals.<br>
 
 
 ## Demo Screenshots/Video
