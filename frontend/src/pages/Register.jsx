@@ -14,7 +14,11 @@ function Register() {
     email: '',
     password: '',
     password2: '',
+
   })
+
+
+  const [postImage, setPostImage] = useState("")
 
   const { name, email, password, password2 } = formData
 
@@ -24,6 +28,16 @@ function Register() {
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   )
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertToBase64(file);
+    console.log(base64)
+    setPostImage(base64)
+
+  };
+
+
 
   useEffect(() => {
     if (isError) {
@@ -46,6 +60,7 @@ function Register() {
 
   const onSubmit = (e) => {
     e.preventDefault()
+    console.log(postImage);
 
     if (password !== password2) {
       toast.error('Passwords do not match')
@@ -54,6 +69,7 @@ function Register() {
         name,
         email,
         password,
+        postImage
       }
 
       dispatch(register(userData))
@@ -85,7 +101,7 @@ function Register() {
               <div className=''>
                 <input
                   type='text'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
+                  className=' duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
                   id='name'
                   name='name'
                   value={name}
@@ -96,7 +112,7 @@ function Register() {
               <div className=''>
                 <input
                   type='email'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
+                  className=' duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
                   id='email'
                   name='email'
                   value={email}
@@ -107,7 +123,7 @@ function Register() {
               <div className=''>
                 <input
                   type='password'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
+                  className=' duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
                   id='password'
                   name='password'
                   value={password}
@@ -118,13 +134,24 @@ function Register() {
               <div className=''>
                 <input
                   type='password'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
+                  className=' duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
                   id='password2'
                   name='password2'
                   value={password2}
                   placeholder='Confirm password'
                   onChange={onChange}
                 />
+              </div>
+              <div className="mb-6">
+                <input
+                  lable="image"
+                  type="file"
+                  name="image"
+                  onChange={(e) => handleImageChange(e)}
+                  className='rounded-lg'
+                />
+
+
               </div>
               <div className='my-2'>
                 <button className=' bg-black hover:scale-[1.01] duration-[300ms] text-white py-[10px] px-[20px]  drop-shadow-2xl rounded-full nun-font-600 '>
@@ -134,8 +161,10 @@ function Register() {
               <div className='text-[16px] nun-font-500'>
                 Already have an account?
               </div>
-              <Link className='text-[16px] hover:cursor-pointer nun-font-500' to='/' >
-                Login to Heaven</Link>
+              <div className='hover:scale-[1.1] duration-[300ms]'>
+                <Link className='text-[18px] hover:cursor-pointer nun-font-700' to='/' >
+                  Login</Link>
+              </div>
             </form>
           </section>
         </div>
@@ -144,4 +173,19 @@ function Register() {
   )
 }
 
+
+
 export default Register
+
+function convertToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result)
+    };
+    fileReader.onerror = (error) => {
+      reject(error)
+    }
+  })
+}

@@ -52,21 +52,22 @@ function ExpenseItem({ expense, onClose }) {
 
 
   function Dropdown({ selectedOption, isDropdownOpen, handleOptionSelect }) {
-    const options = ["All Categories", "Food", "Movie", "Travel","Medical","Shopping","Grocery"];
+    const options = ["All Categories", "Food", "Movie", "Travel", "Medical", "Shopping"];
     return (
       <div className="">
-        <div className="relative w-56 px-4 py-2.5 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]" onClick={() => setDropdownOpen(!isDropdownOpen)}>
+        <div className="relative w-56 px-4 py-2.5 ring ring-1 ring-gray-500 rounded-[10px] outline-none  duration-[300ms]" onClick={() => setDropdownOpen(!isDropdownOpen)}>
           {selectedOption || "Add tag"}
           <span className="absolute right-[10px]">
             <img
               src={arrow}
               className={`w-[7px] inline ml-3 mr-2 duration-[300ms] ${isDropdownOpen ? "rotate-[270deg]" : "rotate-[90deg]"} `}
-            /></span>
+            />
+          </span>
         </div>
         {isDropdownOpen && (
-          <ul className="absolute text-gray-700 hover:text-black py-1 mt-2 w-fit rounded-[10px] nm-inset-slate-200 shadow-lg ">
+          <ul className="absolute text-gray-700 hover:text-black mt-2 w-fit rounded-[10px] bg-white shadow-lg ">
             {options.map((option) => (
-              <li className={`w-56 text-center cursor-pointer px-4 py-2 hover:nm-inset-slate-200-lg duration-[300ms] rounded-[10px] ${selectedOption === option ? "nm-inset-slate-300" : ""
+              <li className={`w-56 text-center cursor-pointer px-4 py-2 hover:bg-gray-200  duration-[300ms] rounded-[10px] ${selectedOption === option ? "" : ""
                 }`} key={option} onClick={() => handleOptionSelect(option)}>
                 {option}
               </li>
@@ -80,9 +81,9 @@ function ExpenseItem({ expense, onClose }) {
     <>
       <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[1] ">
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black opacity-50"></div>
-        <div className="relative rounded-xl bg-slate-200 shadow-2xl drop-shadow-2xl p-6">
+        <div className="relative rounded-xl bg-white shadow-2xl drop-shadow-2xl p-6">
           <div className="flex relative mb-[12px]">
-            <h1 className="text-[18px] nuns-font-700 ">Edit EXspends</h1>
+            <h1 className="text-[18px] nuns-font-700 ">Edit Expense</h1>
             <button
               className=" text-black font-medium bottom-1 absolute h-full right-2 hover:scale-[1.2] duration-[300ms]"
               onClick={onClose}
@@ -99,7 +100,7 @@ function ExpenseItem({ expense, onClose }) {
                 id="desc"
                 placeholder={expense.desc}
                 value={desc}
-                className="w-full px-4 py-2.5 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] mb-6"
+                className="w-full px-4 py-2.5 rounded-[10px] outline-none duration-[300ms] mb-6"
                 onChange={(e) => setDesc(e.target.value)}
               />
               <div className="flex mb-6">
@@ -109,7 +110,7 @@ function ExpenseItem({ expense, onClose }) {
                   id="cost"
                   placeholder={expense.cost}
                   value={editedCost}
-                  className="w-56 px-4 py-2.5 mr-6 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]"
+                  className="w-56 px-4 py-2.5 mr-6 rounded-[10px] outline-none duration-[300ms]"
                   onChange={(e) => setEditedCost(e.target.value)}
                 />
                 <div className="w-56 flex items-center rounded-[10px]">
@@ -130,7 +131,7 @@ function ExpenseItem({ expense, onClose }) {
                     id="mode"
                     placeholder={expense.mode}
                     value={mode}
-                    className="w-56 px-4 py-2.5 mr-6 rounded-[10px] nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] outline-none"
+                    className="w-56 px-4 py-2.5 mr-6 rounded-[10px]  duration-[300ms] outline-none"
                     onChange={(e) => setMode(e.target.value)}
                   />
                 </div>
@@ -145,7 +146,7 @@ function ExpenseItem({ expense, onClose }) {
                 id="tag"
                 placeholder="Add tag"
                 value={tag}
-                className="w-56 px-4 py-2.5  rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]"
+                className="w-56 px-4 py-2.5  rounded-[10px] outline-none nm-inset-gray-200 focus:nm-inset-gray-200-lg duration-[300ms]"
                 onChange={(e) => setTag(e.target.value)}
               /> */}
               </div>

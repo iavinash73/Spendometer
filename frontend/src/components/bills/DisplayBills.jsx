@@ -41,7 +41,7 @@ function DisplayBills({ bills }) {
   return (<>
 
 
-    <div className="p-1.5 mx-[3%] nm-inset-slate-200 overflow-auto md:max-w-min rounded-xl nuns-font-600">
+    <div className="p-1.5 mx-[3%] overflow-auto md:max-w-min rounded-xl nuns-font-600">
       <div className="max-h-[500px] md:max-h-[550px] w-screen md:max-w-min overflow-auto">
         <table className="divide-y divide-gray-400 ">
           <thead className="">
@@ -71,34 +71,34 @@ function DisplayBills({ bills }) {
           <tbody className="">
             {bills.map((specbill) => (
               <tr
-                className={`hover:nm-inset-slate-200 rounded-lg duration-[300ms]`}
+                className={` rounded-lg duration-[300ms]`}
               >
                 <td
-                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-slate-600'
+                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-gray-600'
                     }`}
                 >
                   {specbill.title}
                 </td>
                 <td
-                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-slate-600'
+                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-gray-600'
                     }`}
                 >
                   {specbill.cost}
                 </td>
                 <td
-                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-slate-600'
+                  className={`px-6 py-4 text-gray-800 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-gray-600'
                     }`}
                 >
                   {specbill.duration}
                 </td>
                 <td
-                  className={`px-6 py-4 text-green-500 hover:text-green-700 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-slate-600'
+                  className={`px-6 py-4 text-green-500 hover:text-green-700 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-gray-600'
                     }`}
                 >
                   {specbill.startingDate}
                 </td>
                 <td
-                  className={`px-6 py-4 text-green-500 hover:text-green-700 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-slate-600'
+                  className={`px-6 py-4 text-green-500 hover:text-green-700 whitespace-nowrap ${specbill.status === true ? '' : ' line-through decoration-gray-600'
                     }`}
                 >
                   {calculateRenewalDate(specbill.startingDate, specbill.duration)}
@@ -116,27 +116,29 @@ function DisplayBills({ bills }) {
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div>
                     <a
-                      className="text-red-500 hover:text-red-700"
+                      className="text-green-500 hover:text-red-700 duration-[300ms]"
                       href="#"
                       onClick={() => openDialog(specbill._id)}
                     >
                       Edit
                     </a>
-                    {isDialogOpen && st === specbill._id && (
-                      <UpdateItem key={specbill._id} bill={specbill} onClose={closeDialog} />
-                    )}
+
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <a
                     onClick={() => dispatch(deleteBill({ id: specbill._id, cost: specbill.cost }))}
-                    className="text-red-500 hover:text-red-700"
+                    className="text-red-500 hover:text-red-700 duration-[300ms]"
                     href="#"
                   >
                     Delete
                   </a>
                 </td>
+                {isDialogOpen && st === specbill._id && (
+                  <UpdateItem key={specbill._id} bill={specbill} onClose={closeDialog} />
+                )}
               </tr>
+
             ))}
           </tbody>
         </table>

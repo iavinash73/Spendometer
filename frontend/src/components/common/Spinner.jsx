@@ -5,9 +5,9 @@ import spinnerGif from "../../images/rickroll.gif"; // Replace "spinner.gif" wit
 function Spinner() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="nm-flat-slate-200-xl rounded-full">
+      <div className=" rounded-full">
         <div
-          className="animate-spin-slow rounded-full h-16 w-16 md:h-32 md:w-32 border-t-2 border-black"
+          className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] animate-spin-slow rounded-full h-16 w-16 md:h-32 md:w-32 bg-gray-200 "
           style={{
             backgroundImage: `url(${spinnerGif})`,
             backgroundSize: "cover",

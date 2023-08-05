@@ -2,10 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 html{
-  background-color: rgb(226 232 240);
-}
+
+  background-color:rgb(209 213 219);
+
+} */
 
 .animate-spin-slow {
   animation: spin 2s linear infinite; /* Adjust the animation duration as needed */

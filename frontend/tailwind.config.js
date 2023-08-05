@@ -3,10 +3,12 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
+    "./node_modules/flowbite/**/*.js"
+
   ],
   theme: {
     extend: {
     },
   },
-  plugins: [require('tailwindcss-neumorphism')],
+  plugins: [require('tailwindcss-neumorphism'),  require('flowbite/plugin')],
 }

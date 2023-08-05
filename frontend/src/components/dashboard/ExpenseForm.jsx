@@ -40,11 +40,11 @@ function GoalForm({ onClose }) {
 
 
   function Dropdown({ selectedOption, isDropdownOpen, handleOptionSelect }) {
-    const options = ["All Categories", "Food", "Movie", "Travel","Medical","Shopping","Grocery"];
+    const options = ["All Categories", "Food", "Movie", "Travel","Medical","Shopping"];
     return (
       <div className="w-56">
 
-        <div className="relative w-56 px-4 py-2.5 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]" onClick={() => setDropdownOpen(!isDropdownOpen)}> {selectedOption || "Add tag"}
+        <div className="relative w-56 px-4 py-2.5 ring ring-1 ring-gray-500 rounded-[10px] outline-none  duration-[300ms]" onClick={() => setDropdownOpen(!isDropdownOpen)}> {selectedOption || "Add tag"}
           <span className="absolute right-[10px]">
             <img
               src={arrow}
@@ -52,9 +52,9 @@ function GoalForm({ onClose }) {
             /></span>
         </div>
         {isDropdownOpen && (
-          <ul className="absolute mt-2 text-gray-700 hover:text-black py-1 w-fit rounded-[10px] nm-inset-slate-200 shadow-lg ">
+          <ul className="absolute mt-2 text-gray-700 hover:text-black bg-white py-1 w-fit rounded-[10px]  shadow-lg ">
             {options.map((option) => (
-              <li className={`w-56 text-center cursor-pointer px-4 py-2 hover:nm-inset-slate-200-lg duration-[300ms] rounded-[10px] ${selectedOption === option ? "nm-inset-slate-300" : ""
+              <li className={`w-56 text-center cursor-pointer px-4 py-2  duration-[300ms] rounded-[10px] ${selectedOption === option ? "" : ""
                 }`} key={option} onClick={() => handleOptionSelect(option)}>
                 {option}
               </li>
@@ -69,9 +69,9 @@ function GoalForm({ onClose }) {
   return (
     <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
       <div className="fixed top-0 left-0 right-0 bottom-0 bg-black opacity-50 z-[2]"></div>
-      <div className="rounded-xl bg-slate-200 shadow-2xl drop-shadow-2xl p-6 z-[3]">
+      <div className="rounded-xl bg-white shadow-2xl drop-shadow-2xl p-6 z-[3]">
         <div className="flex relative mb-[12px]">
-          <h1 className="text-[18px] nuns-font-700 ">Add EXspends</h1>
+          <h1 className="text-[18px] nuns-font-700 ">Add Expense</h1>
           <button className=" text-black font-medium bottom-1 absolute h-full right-2 hover:scale-[1.2] duration-[300ms]" onClick={onClose}>
             X
           </button>
@@ -85,7 +85,7 @@ function GoalForm({ onClose }) {
               id="desc"
               placeholder="Add description"
               value={desc}
-              className="w-full px-4 py-2.5 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] mb-6"
+              className="w-full px-4 py-2.5 rounded-[10px] outline-none  duration-[300ms] mb-6"
               onChange={(e) => setDesc(e.target.value)}
             />
             <div className="flex mb-6">
@@ -95,7 +95,7 @@ function GoalForm({ onClose }) {
                 id="cost"
                 placeholder="Add cost"
                 value={cost}
-                className="w-56 px-4 py-2.5 mr-6 rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]"
+                className="w-56 px-4 py-2.5 mr-6 rounded-[10px] outline-none duration-[300ms]"
                 onChange={(e) => setCost(e.target.value)}
               />
               <div className="w-56 flex items-center rounded-[10px]">
@@ -114,7 +114,7 @@ function GoalForm({ onClose }) {
                 id="mode"
                 placeholder="Add mode of transaction"
                 value={mode}
-                className="w-56 px-4 py-2.5 mr-6 rounded-[10px] nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] outline-none"
+                className="w-56 px-4 py-2.5 mr-6 rounded-[10px] duration-[300ms] outline-none"
                 onChange={(e) => setMode(e.target.value)}
               />
               <Dropdown
@@ -128,7 +128,7 @@ function GoalForm({ onClose }) {
                 id="tag"
                 placeholder="Add tag"
                 value={tag}
-                className="w-56 px-4 py-2.5  rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]"
+                className="w-56 px-4 py-2.5  rounded-[10px] outline-none nm-inset-gray-300 focus:nm-inset-gray-300-lg duration-[300ms]"
                 onChange={(e) => setTag(e.target.value)}
               /> */}
             </div>

@@ -62,16 +62,15 @@ function Login() {
       <Header />
       <div className='items-center justify-center flex h-screen'>
         <div className='w-screen'>
-          <section className='text-center mb-4'>
+          <section className='text-center mb-10'>
             <p className='text-[24px] nun-font-700'>Login to your Account</p>
           </section>
-
           <section className='text-center'>
             <form onSubmit={onSubmit}>
               <div className=''>
                 <input
                   type='email'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
+                  className=' duration-[300ms] rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 mb-[15px] outline-none'
                   id='email'
                   name='email'
                   value={email}
@@ -82,7 +81,7 @@ function Login() {
               <div className=''>
                 <input
                   type='password'
-                  className='nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]  rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 my-[15px] outline-none'
+                  className='duration-[300ms]  rounded-lg w-[70%] md:w-[30%] px-4 py-2.5 my-[15px] outline-none'
                   id='password'
                   name='password'
                   value={password}
@@ -98,17 +97,19 @@ function Login() {
               </div>
             </form>
 
-            <div className='text-[16px] mt-2 nun-font-500'>
+            <div className='text-[16px] mt-6 nun-font-500'>
               Don't have an account?
             </div>
-            <Link to='/register' >
-              <span className='text-[16px] hover:cursor-pointer nun-font-500  hover:scale-[1.05] duration-[300ms] ' >
+            <div className='hover:scale-[1.05] duration-[300ms] mt-1'>
+              <Link to='/register' >
+                <span className='text-[18px] hover:cursor-pointer nun-font-700' >
 
-                Register now
+                  Register now
 
-              </span>
+                </span>
 
-            </Link>
+              </Link>
+            </div>
 
           </section>
         </div>

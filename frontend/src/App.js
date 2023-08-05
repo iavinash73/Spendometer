@@ -9,6 +9,7 @@ import Savings from './pages/Savings';
 import Bill from './pages/Bill';
 import Sidebar from './components/common/Sidebar';
 import BottomBar from './components/common/BottomBar';
+import Colab from './pages/Colab';
 function App() {
   return (
     <>
@@ -26,7 +27,7 @@ function AppContent() {
 
   useEffect(() => {
     // Code to run every time the path changes
-    console.log('Current URL path:', path);
+    // console.log('Current URL path:', path);
   }, [path]);
 
   return (
@@ -41,6 +42,7 @@ function AppContent() {
           <Route path="/register" element={<Register />} />
           <Route path="/savings" element={<Savings />} />
           <Route path="/bills" element={<Bill />} />
+          <Route path="/colabs" element={<Colab />} />
         </Routes>
       </div>
     </div>

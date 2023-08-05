@@ -19,9 +19,9 @@ function DisplayExpenses({ expenses }) {
   };
 
   return (
-    <div className="p-1.5 md:mx-0 mx-[3%] nm-inset-slate-200 text-[17px] overflow-auto md:max-w-min rounded-xl nuns-font-600">
+    <div className="p-1.5 md:mx-0 mx-[3%]  text-[17px] overflow-auto md:max-w-min rounded-xl nuns-font-600">
       <div className="max-h-[500px] md:max-h-[550px] w-screen md:max-w-min overflow-auto">
-        <table className="divide-y divide-gray-400">
+        <table className="divide-y divide-gray-400 ">
           <thead>
             <tr>
               <th scope="col" className="px-6 py-3 text-gray-500 uppercase">
@@ -43,10 +43,10 @@ function DisplayExpenses({ expenses }) {
               <th scope="col" className="px-6 py-3 text-gray-500 uppercase"></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {expenses.map((specexpense) => (
-              <tr className="hover:nm-inset-slate-200 rounded-lg duration-[300ms]" key={specexpense._id}>
-                <td className="px-6 py-4 text-gray-800 whitespace-nowrap">
+              <tr className="duration-[300ms]" key={specexpense._id}>
+                <td className="px-6 py-4 text-gray-800 whitespace-nowrap ">
                   {specexpense.desc}
                 </td>
                 <td className="px-6 py-4 text-gray-800 whitespace-nowrap">
@@ -55,16 +55,16 @@ function DisplayExpenses({ expenses }) {
                 <td className="px-6 py-4 text-gray-800 whitespace-nowrap">
                   {specexpense.tag}
                 </td>
-                <td className="px-6 py-4 text-green-500 hover:text-green-700 whitespace-nowrap">
+                <td className="px-6 py-4 text-gray-800 whitespace-nowrap">
                   {specexpense.mode}
                 </td>
                 <td className="px-6 py-4  whitespace-nowrap">
                   {specexpense.date}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <div>
+                  <div className="hover:scale-[1.07] duration-[300ms]">
                     <a
-                      className="text-red-500 hover:text-red-700"
+                      className="text-green-500 hover:text-green-700 duration-[300ms]"
                       href="#"
                       onClick={() => openDialog(specexpense._id)}
                     >
@@ -80,20 +80,23 @@ function DisplayExpenses({ expenses }) {
                   />
                 )}
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <a
-                    onClick={() =>
-                      dispatch(
-                        deleteExpense({
-                          id: specexpense._id,
-                          cost: specexpense.cost,
-                        })
-                      )
-                    }
-                    className="text-red-500 hover:text-red-700"
-                    href="#"
-                  >
-                    Delete
-                  </a>
+                  <div className="hover:scale-[1.05] duration-[300ms]">
+
+                    <a
+                      onClick={() =>
+                        dispatch(
+                          deleteExpense({
+                            id: specexpense._id,
+                            cost: specexpense.cost,
+                          })
+                        )
+                      }
+                      className="text-red-500 hover:text-red-700 hover:scale-[1.07] duration-[300ms]"
+                      href="#"
+                    >
+                      Delete
+                    </a>
+                  </div>
                 </td>
               </tr>
             ))}

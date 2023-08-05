@@ -10,6 +10,7 @@ import edit from "../../images/edit.png";
 // import "./DisplaySavings.css"; // Import CSS file
 
 function DisplaySavings({ savings }) {
+  // const backgroundColors = ["#E3F5FF", "#E5ECF6"];
   const dispatch = useDispatch();
   const progressRef = useRef(null);
 
@@ -56,10 +57,11 @@ function DisplaySavings({ savings }) {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mt-[20px] ml-[3%] mr-[3%] "
         ref={progressRef}
       >
-        {savings.map((specsaving) => (
+        {savings.map((specsaving, index) => (
           <div
             key={specsaving._id}
-            className="relative flex flex-col border nm-flat-slate-200 rounded-[10px] my-[4%] mx-[4%] px-[7%] pt-[2%] pb-[4%] nuns-font-600 text-[16px] focus-within:scale-[1.05] hover:scale-[1.05] group hover:nm-flat-slate-200-lg duration-[300ms]"
+            className={`relative flex flex-col border border-gray-300 shadow-md rounded-[10px] my-[4%] mx-[4%] px-[7%] pt-[2%] pb-[4%] nuns-font-600 text-[16px] focus-within:scale-[1.01] group hover:scale-[1.01] duration-[300ms] bg-[#E5ECF6] }`}
+            // style={{ backgroundColor: backgroundColors[index % 2] }}
           >
             <div className="text-[24px] nuns-font-700 my-[3px] duration-[300ms]">
               {specsaving.title}
@@ -79,13 +81,12 @@ function DisplaySavings({ savings }) {
             ) : (
               <div className="my-[3px] duration-[300ms]">
                 <div className="flex items-center">
-                  <div className="bg-slate-100 rounded-[10px] nm-flat-slate-100 h-3 w-[70%]">
+                  <div className="bg-gray-300 rounded-full h-[6px] w-[70%]">
                     <div
-                      className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  rounded-[10px] h-3 transition-all duration-500 progress-bar"
+                      className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-full h-[6px] transition-all duration-500 progress-bar"
                       style={{
-                        width: `${
-                          (specsaving.savedAmount / specsaving.target) * 100
-                        }%`,
+                        width: `${(specsaving.savedAmount / specsaving.target) * 100
+                          }%`,
                       }}
                       data-saved-amount={specsaving.savedAmount}
                       data-target={specsaving.target}
@@ -113,7 +114,7 @@ function DisplaySavings({ savings }) {
                   id="saving"
                   placeholder={`Add to ${specsaving.title} saving`}
                   value={sav[specsaving._id] || ""}
-                  className="px-4 py-2 w-[100%] rounded-[10px] outline-none nm-inset-slate-200 focus:nm-inset-slate-200-lg duration-[300ms]"
+                  className="px-3 py-1 w-[100%] rounded-[10px] outline-none  duration-[300ms]"
                   onChange={(e) => handleInputChange(specsaving._id, e)}
                 />
               </div>
@@ -121,7 +122,7 @@ function DisplaySavings({ savings }) {
 
             <div className="flex justify-between items-center mt-[10px]">
               <button
-                className="w-[30%] bg-black drop-shadow-lg shadow-lg duration-[300ms] rounded-[10px] text-white py-1"
+                className="w-[20%] bg-black drop-shadow-lg shadow-lg hover:scale-[1.05] duration-[300ms] rounded-[10px] text-white py-1"
                 onClick={() => {
                   if (sav[specsaving._id] === undefined) {
                     dispatch(addSaving({ id: specsaving._id, sav: 0 }));
