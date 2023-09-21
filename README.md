@@ -7,7 +7,7 @@ Spend-o-meter is a comprehensive personal finance tracker that simplifies money 
 [Demo Video](https://drive.google.com/file/d/1hy2_6YBVVsqPIJuD3HKoQXDaOpY7KhSV/view)
 ![demo](https://github.com/Fastest-Coder-First/Dracarys/assets/91118866/25d6846a-c13d-48c8-bcfd-eb94bc7904cb)
 
-
+Try it out at https://spend-o-meter-main.onrender.com/
 
 
 ## Features
