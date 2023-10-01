@@ -1,6 +1,6 @@
-# Spend-o-meter - Personalized Expense tracker
+# Spendometer - Personalized Expense tracker
 
-Spend-o-meter is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals. User Dashboard gives insights about the spending trend so they are better informed about their daily, weekly, montly expenses.
+Spendometer is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals. User Dashboard gives insights about the spending trend so they are better informed about their daily, weekly, montly expenses.
 
 ## Demo Screenshots/Video
 
