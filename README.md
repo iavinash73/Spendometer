@@ -5,6 +5,7 @@ Spendometer is a comprehensive personal finance tracker that simplifies money ma
 ## Demo Screenshots/Video
 
 Try it out at https://spend-o-meter-main.onrender.com/
+
 View the Figma Design [here](https://www.figma.com/file/7VIQvMboevTR3oG2uBrOyT/Spend-o-Meter?type=design&node-id=0%3A1&mode=design&t=jaUgqyDcZQlOHLgy-1)
 
 ## Features
