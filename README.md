@@ -1,23 +1,16 @@
-# Spend-o-meter
+# Spend-o-meter - Personalized Expense tracker
 
-Spend-o-meter is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals.<br>
-
+Spend-o-meter is a comprehensive personal finance tracker that simplifies money management. With powerful budgeting tools and insightful analytics, it empowers users to take control of their finances and achieve their financial goals. User Dashboard gives insights about the spending trend so they are better informed about their daily, weekly, montly expenses.
 
 ## Demo Screenshots/Video
-[Demo Video](https://drive.google.com/file/d/1hy2_6YBVVsqPIJuD3HKoQXDaOpY7KhSV/view)
-![demo](https://github.com/Fastest-Coder-First/Dracarys/assets/91118866/25d6846a-c13d-48c8-bcfd-eb94bc7904cb)
 
 Try it out at https://spend-o-meter-main.onrender.com/
-
+View the Figma Design [here](https://www.figma.com/file/7VIQvMboevTR3oG2uBrOyT/Spend-o-Meter?type=design&node-id=0%3A1&mode=design&t=jaUgqyDcZQlOHLgy-1)
 
 ## Features
-
-- **Dashboard Page**: Add, delete, and edit expenses to track your spending and categorize your expenses for better organization. The dashboard provides an overview of your expenses, bills and savings, allowing you to get a snapshot of your financial situation.
+- **Dashboard Page**: Add, delete, and edit expenses to track your spending and categorize your expenses for better organization. The dashboard provides an overview of your expenses, bills and savings, allowing you to get a snapshot of your financial situation. Filter the expense wrt the tags and time of expense.
 - - **Collaboration Feature**: Enable collaboration between users, allowing them to share and collaborate on expense tracking. Users can invite others to join their financial group, share expenses, and view real-time updates. This feature promotes financial transparency and facilitates joint expense management, such as shared household expenses or group trips.
-
-
 - **Savings Page**: Define financial goals, such as saving for a vacation or a down payment on a house. The system helps you calculate the required savings amount based on your goal and desired timeframe. Track your progress towards your savings goals and allocate funds from your income accordingly.
-
 - **Subscriptions and Recurrent Bills Page**: Manage your subscriptions and recurring bills in one place. Add, view, and update your subscriptions and bills, including payment amounts, due dates, and payment methods.
 
 ## Architectural Flow
@@ -26,11 +19,9 @@ Try it out at https://spend-o-meter-main.onrender.com/
 ## Additional Features (Future Scopes)
 
 - **Real-Time Price Comparison**: Implement a real-time price comparison feature that allows users to compare the prices of products or services with market prices. Users can search for a specific item or scan a barcode, and the application will provide real-time price comparisons from various online retailers or local stores. This feature empowers users to make informed purchasing decisions and find the best deals available.
-
 - **Lens/Scan Feature**: Implement a lens/scan feature that allows users to capture and extract expense information directly from bills or receipts. This feature can utilize optical character recognition (OCR) technology to extract relevant data such as vendor name, date, and amount, making expense tracking more convenient and efficient.
 
 ## Getting Started
-
 To get started with the Personal Finance Tracker, follow these steps:
 
 1. Clone the repository.
